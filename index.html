@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>爆款内容分析器 - AI驱动的爆款密码破解器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 爆款内容分析器</h1>
+            <p class="subtitle">AI 驱动的爆款密码破解器 | 支持小红书、微信公众号</p>
+        </header>
+
+        <main>
+            <!-- 链接输入区域 -->
+            <div class="input-section">
+                <label for="urlInput">📎 输入帖子/文章链接</label>
+                <textarea 
+                    id="urlInput" 
+                    placeholder="支持多个链接，每行一个：&#10;https://www.xiaohongshu.com/discovery/item/...&#10;https://mp.weixin.qq.com/s/..."
+                    rows="4"
+                ></textarea>
+                <div class="example-links">
+                    <span>示例链接：</span>
+                    <button class="example-btn" data-url="https://www.xiaohongshu.com/explore/64a8b3c2000000000a031234">小红书爆款示例</button>
+                    <button class="example-btn" data-url="https://mp.weixin.qq.com/s/example123">公众号爆款示例</button>
+                </div>
+            </div>
+
+            <!-- 分析按钮 -->
+            <button id="analyzeBtn" class="btn-primary">
+                ✨ AI 分析爆款原因
+            </button>
+
+            <!-- 加载状态 -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>AI 正在深度分析中...</p>
+            </div>
+
+            <!-- 分析结果区域 -->
+            <div id="result" class="result hidden">
+                <div class="result-header">
+                    <h2>📊 爆款密码解析</h2>
+                    <button id="copyResultBtn" class="btn-secondary">📋 复制分析结果</button>
+                </div>
+                <div id="analysisResult" class="analysis-content"></div>
+                
+                <!-- 内容生成区域 -->
+                <div class="generation-section">
+                    <h3>🎨 同款爆火内容生成</h3>
+                    <div class="generation-options">
+                        <label for="contentType">内容类型：</label>
+                        <select id="contentType">
+                            <option value="xiaohongshu">小红书笔记</option>
+                            <option value="wechat">微信公众号文章</option>
+                            <option value="general">通用爆款文案</option>
+                        </select>
+                        
+                        <label for="topic">主题/关键词：</label>
+                        <input type="text" id="topic" placeholder="输入主题，如：护肤、育儿、副业..." value="">
+                    </div>
+                    <button id="generateBtn" class="btn-primary btn-generate">
+                        🚀 生成同款爆火内容
+                    </button>
+                    <div id="generationResult" class="generation-result hidden"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>💡 提示：本应用使用 AI 模拟分析，实际应用中可接入真实 AI API</p>
+            <p>🔗 <a href="https://github.com/MinalpayM/viral-content-analyzer" target="_blank">GitHub 源码</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
